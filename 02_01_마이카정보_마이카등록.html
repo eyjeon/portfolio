@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<title>신한카드 마이카프리미엄</title>
+<meta http-equiv="Content-Type" content="text/html;charset=euc-kr"/>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0'/>
+<meta name='format-detection' content='telephone=no' />
+<!-- 페이지템플릿 리소스 -->
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
+<link rel="stylesheet" type="text/css" href="resource/css/bam/shc/mp/font_sh.css" />
+<link rel="stylesheet" type="text/css" href="resource/css/bam/shc/mp/ui.css" />
+<script type="text/javascript" src="resource/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="resource/js/bam/shc/mp/slick.min.js"></script>
+<script type="text/javascript" src="resource/js/bzm/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="resource/js/bam/shc/mp/waypoints.min.js"></script>
+<script type="text/javascript" src="resource/js/bam/shc/mp/ycounter.v3.0.js"></script>
+
+<script type="text/javascript" src="resource/js/bam/shc/mp/common.js"></script>
+
+
+<script type="text/javascript">
+var carNameFn = function(target){
+	var wrap = target.closest('.myCarName')
+	  , inpElem = wrap.find('input')
+	  , btnElem = wrap.find('.myCarNameTxt');
+
+	return {
+		change:function(){
+			var txt = target.text();
+
+			wrap.toggleClass('on');
+			inpElem.val(txt).focus();
+		},
+		save:function(){
+			var txt = inpElem.val();
+
+			wrap.removeClass('on');
+			if(txt == '') txt = '닉네임을 입력하세요';
+			btnElem.text(txt);
+		},
+		cancel:function(){
+			wrap.removeClass('on');
+		}
+	}
+}
+
+$(function(){
+	// 내차 닉네임 변경
+	$('body').on('click', '.myCarNameTxt', function(e){
+		e.preventDefault();
+
+		var cardName = new carNameFn($(this));
+		cardName.change();
+	}).on('click', '.myCarNameSave', function(e){
+		e.preventDefault();
+
+		var cardName = new carNameFn($(this));
+		cardName.save();
+	}).on('click', '.myCarNameCancel', function(e){
+		e.preventDefault();
+
+		var cardName = new carNameFn($(this));
+		cardName.cancel();
+	});
+
+
+
+    // 내차 삭제
+    $('body').on('click', '.myCarDelBtn', function(e){
+        e.preventDefault();
+
+        var delConf = confirm('삭제하시겠습니까?');
+
+        if(delConf) $(this).closest('li').remove();
+    });
+
+
+
+	// 마이카 등록
+	$('body').on('click', '.addCarBtn', function(e){
+		e.preventDefault();
+
+		var layer = new layerFn($('.carLayer'));
+		layer.open();
+	});
+
+
+
+
+	// 차량조회 약관 동의
+	$('body').on('change', 'input[name="checkAll"]', function(){
+		var blnChk = $(this).is(':checked')
+		  , inpElem = $('input[name="agree"]');
+
+		inpElem.prop('checked', blnChk);
+	}).on('change', 'input[name="agree"]', function(){
+		var blnAllChk = true;
+
+		if($(this).is(':checked')){
+			$('input[name="agree"]').each(function(){
+				if(!$(this).is(':checked')){
+					blnAllChk = false;
+					return false;
+				}
+			});
+		}else{
+			blnAllChk = false;
+		}
+		$('input[name="checkAll"]').prop('checked', blnAllChk);
+	});
+
+
+
+	// 차량번호 입력 후 확인 버튼 클릭
+	var carWizard = new wizardFn($('.carWizard'));
+
+	$('body').on('click', '.carNumChk', function(e){
+		e.preventDefault();
+
+		var blnAllChk = true;
+
+		$('input[name="agree"]').each(function(){
+			if(!$(this).is(':checked')){
+				blnAllChk = false;
+				alert($(this).attr('title') + '해주세요.');
+				return false;
+			}
+		});
+
+		if(blnAllChk){
+			// validation check
+			carWizard.move(2);
+			var imgSrc = $('.srchLoadImg img').attr('src')
+			  , path = imgSrc.substr(0, imgSrc.length - 4)
+			  , date = new Date();
+
+			$('.carWizard').find('.srchLoadImg img').attr('src', path + '.gif?' + date.getTime());
+		}
+	});
+
+
+
+	// 차량 로딩 새로고침
+	$('body').on('click', '.carRefresh', function(e){
+		e.preventDefault();
+
+		carWizard.move(3);
+	});
+});
+</script>
+
+
+</head>
+<body>
+	<div id="wrap">
+
+
+		<!-- s: header -->
+		<div id="header">
+			<div class="headerWrap">
+				<h1 class="headerTit"><a href="00_main.html">마이카 프리미엄</a></h1>
+				<a href="#none" class="headerBtn topMenuBtn">전체 메뉴 보기</a>
+				<a href="#none" class="headerBtn topBackBtn">뒤로가기</a>
+			</div>
+		</div>
+		<!-- e: header -->
+
+
+		<!-- s: nav -->
+		<div id="nav">
+			<div class="navDimm"></div>
+			<div class="navWrap">
+				<div class="navTop">
+					<!-- s: 로그인 전 -->
+					<!-- <p class="navTit">로그인이 필요합니다.</p>
+					<a href="#none" class="navTopBtn navLogin">로그인</a>
+					<a href="#none" class="navTopBtn navCloseBtn">닫기</a> -->
+					<!-- e: 로그인 전 -->
+
+					<!-- s: 로그인 후 -->
+					<p class="navTit"><strong>홍*동</strong>님, 반가워요!</p>
+					<a href="#none" class="navTopBtn navLogout">로그아웃</a>
+					<a href="#none" class="navTopBtn navCloseBtn">닫기</a>
+					<!-- e: 로그인 후 -->
+				</div>
+
+				<!-- s: gnb -->
+				<ul class="navLst depth1">
+					<li><a href="01_01_서비스안내.html" class="navBtn depth1">서비스 안내</a></li>
+					<li>
+						<a href="#none" class="navBtn depth1">마이카 정보</a>
+						<ul class="navLst depth2">
+							<li><a href="02_01_마이카정보_마이카등록.html" class="navBtn depth2">마이카 등록</a></li>
+							<li><a href="02_02_마이카정보_마이카기본정보.html" class="navBtn depth2">마이카 기본정보</a></li>
+						</ul>
+					</li>
+					<li><a href="03_01_마이카시세.html" class="navBtn depth1">마이카 시세</a></li>
+					<li>
+						<a href="#none" class="navBtn depth1">마이카 금융관리</a>
+						<ul class="navLst depth2">
+							<li><a href="04_01_마이카금융관리_마이카금융정보.html" class="navBtn depth2">마이카 금융정보</a></li>
+							<li><a href="04_02_마이카금융관리_일반금융정보.html" class="navBtn depth2">일반 금융정보</a></li>
+							<li><a href="04_03_마이카금융관리_마이카저당정보.html" class="navBtn depth2">마이카 저당정보</a></li>
+							<li><a href="04_04_마이카금융관리_신상정보변동내역.html" class="navBtn depth2">신용정보변동 내역조회</a></li>
+						</ul>
+					</li>
+					<li><a href="06_01_마이카유지비지원.html" class="navBtn depth1">마이카 유지비 지원</a></li>
+				</ul>
+				<!-- e: gnb -->
+			</div>
+		</div>
+		<!-- e: nav -->
+
+
+
+
+		<!-- s: section -->
+		<div id="section">
+
+			<!-- s: title area -->
+			<div id="topTit">
+				<a href="#none" class="subMenuTit">마이카 정보</a>
+				<div class="subMenuCon">
+					<ul class="subMenuLst">
+						<li><a href="02_01_마이카정보_마이카등록.html" class="snbMenuBtn on">마이카 등록</a></li>
+						<li><a href="02_02_마이카정보_마이카기본정보.html" class="snbMenuBtn">마이카 기본정보</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- e: title area -->
+
+
+			<!-- s: container -->
+			<div id="container">
+
+
+
+				<!-- s: contents -->
+				<div class="conWrap">
+
+					<!-- s: 등록 차량 -->
+					<div class="conBx">
+						<h3 class="titType1">
+							<strong class="txtStr">등록 차량</strong>
+							<span class="txtSm">(총 <span class="cType1">2</span>대)</span>
+
+							<a href="#none" class="btnType small type3 addCarBtn">마이카 등록 +</a>
+						</h3>
+
+						<!-- s: 차량 있음 -->
+						<!-- s: 차량목록 -->
+						<ul class="myCarLst">
+							<!-- s: 반복영역 -->
+							<li>
+								<!-- s: contents -->
+								<div class="bxType1 myCarWrap">
+									<!-- s: name -->
+									<div class="myCarName">
+										<a href="#none" class="myCarNameTxt">마이카 1</a>
+										<div class="myCarNameInp">
+											<input type="text" title="차량 이름선택" placeholder="닉네임 입력(최대 10자)" maxlength="10" />
+											<a href="#none" class="myCarNameCancel">닫기</a>
+											<a href="#none" class="myCarNameSave">확인</a>
+										</div>
+									</div>
+									<!-- e: name -->
+									<a href="#none" class="myCarDelBtn">삭제하기</a>
+
+									<!-- s: contents -->
+									<div class="myCarBx">
+										<div class="myCarImg"><img src="resource/img/bam/shc/mp/carinfo/img_car_sample.jpg" alt="자동차 이미지" /></div>
+										<div class="myCarCon center">
+											<div class="myCarSd">
+												<p class="myCarSdYear">2010년식</p>
+												<p class="myCarSdNum">123 가 3456</p>
+											</div>
+										</div>
+									</div>
+									<p class="myCarType">렉서스 IS(3세대)</p>
+									<!-- e: contents -->
+								</div>
+								<!-- e: contents -->
+
+								<div class="btnArea length2">
+									<a href="#none" class="btnType medium type1">마이카 기본정보</a>
+									<a href="#none" class="btnType medium type2">마이카 시세</a>
+								</div>
+							</li>
+							<!-- e: 반복영역 -->
+
+							<li>
+								<!-- s: contents -->
+								<div class="bxType1 myCarWrap">
+									<!-- s: name -->
+									<div class="myCarName">
+										<a href="#none" class="myCarNameTxt">마이카 1</a>
+										<div class="myCarNameInp">
+											<input type="text" title="차량 이름선택" placeholder="닉네임 입력(최대 10자)" maxlength="10" />
+											<a href="#none" class="myCarNameCancel">닫기</a>
+											<a href="#none" class="myCarNameSave">확인</a>
+										</div>
+									</div>
+									<!-- e: name -->
+									<a href="#none" class="myCarDelBtn">삭제하기</a>
+
+									<!-- s: contents -->
+									<div class="myCarBx">
+										<div class="myCarImg"><img src="resource/img/bam/shc/mp/carinfo/img_car_sample.jpg" alt="자동차 이미지" /></div>
+										<div class="myCarCon center">
+											<div class="myCarSd">
+												<p class="myCarSdYear">2011년식</p>
+												<p class="myCarSdNum">11 가 1234</p>
+											</div>
+										</div>
+									</div>
+									<p class="myCarType">렉서스 IS(3세대)</p>
+									<!-- e: contents -->
+								</div>
+								<!-- e: contents -->
+
+								<div class="btnArea length2">
+									<a href="#none" class="btnType medium type1">마이카 기본정보</a>
+									<a href="#none" class="btnType medium type2">마이카 시세</a>
+								</div>
+							</li>
+						</ul>
+						<!-- e: 차량 있음 -->
+
+
+
+						<!-- s: 차량 없음 -->
+						<!-- <div class="bxType1 carNone">
+							<p class="carNoneTxt1">이런, 아직 내차 정보를<br />등록하지 않으셨군요.</p>
+							<p class="carNoneTxt2">차량정보를 등록해주세요.</p>
+						</div>
+
+						<div class="btnArea length1">
+							<a href="#none" class="btnType medium type1"><span class="btnIcon plus">자동차 등록하기</span></a>
+						</div> -->
+						<!-- e: 차량 없음 -->
+
+
+					</div>
+					<!-- e: 등록 차량 -->
+
+
+				</div>
+				<!-- e: contents -->
+
+
+
+				<!-- s: 차량번호 입력 레이어팝업 -->
+				<div class="popLayer carLayer">
+					<div class="popLayerDimm"></div>
+					<div class="popLayerCon">
+
+
+						<div class="wizardWrap carWizard">
+							<!-- s: 차량번호 입력 및 동의 -->
+							<div class="wizardStep on" data-wizard="1">
+								<div class="popLayerTop">
+									<h3 class="popLayerTot">차량번호를 입력하고<br />시세와 저당정보를 확인하세요.</h3>
+								</div>
+
+								<div class="popLayerInner">
+									<div class="srchCarInp"><input type="text" title="차량번호 입력" placeholder="예) 12가3456" /></div>
+									<div class="srchAgreeWrap">
+										<!-- s: 전체 동의 -->
+										<label class="inpArea checkbox large">
+											<input type="checkbox" id="checkAll" name="checkAll" /><span></span>
+											약관 모두 동의
+										</label>
+										<!-- e: 전체 동의 -->
+										<ul class="srchAgreeLst">
+											<!-- s: 개인정보 수집 및 이용 동의 -->
+											<li>
+												<label class="inpArea checkbox big">
+													<input type="checkbox" id="agree1" name="agree" title="개인정보 수집 및 이용 약관에 동의" /><span></span>
+													개인정보 수집 및 이용 동의 <strong class="cType1">(필수)</strong>
+												</label>
+												<div class="srchAgreeBx">
+													약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관
+												</div>
+											</li>
+											<!-- e: 개인정보 수집 및 이용 동의 -->
+											<!-- s: 개인정보 제3자 동의 -->
+											<li>
+												<label class="inpArea checkbox big">
+													<input type="checkbox" id="agree2" name="agree" title="개인정보 제3자 약관에 동의" /><span></span>
+													개인정보 제3자 동의 <strong class="cType1">(필수)</strong>
+												</label>
+												<div class="srchAgreeBx">
+													약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관약관
+												</div>
+											</li>
+											<!-- e: 개인정보 제3자 동의 -->
+										</ul>
+
+										<p class="txtNotice"><span>본인 소유의 차량만 등록할 수 있습니다.</span></p>
+									</div>
+								</div>
+
+								<a href="#none" class="popLayerBtn carNumChk">확인</a>
+							</div>
+							<!-- e: 차량번호 입력 및 동의 -->
+
+
+
+							<!-- s: 차량 조회 -->
+							<div class="wizardStep" data-wizard="2">
+								<div class="popLayerInner srchLoadWrap">
+									<div class="srchLoadImg"><img src="resource/img/bam/shc/mp/carinfo/bg_loading.gif" alt="loading" /></div>
+									<p class="srchLoadTxt">고객님의 자동차 정보를 찾는 중이에요!</p>
+									<p class="srchLoadTxt2">버튼을 눌러 고객님의<br />자동차 정보가 맞는지 확인해주세요.</p>
+								</div>
+								<a href="#none" class="popLayerBtn carRefresh">새로고침</a>
+							</div>
+							<!-- e: 차량 조회 -->
+
+
+
+							<!-- s: 세부 모델 선택 -->
+							<div class="wizardStep" data-wizard="3">
+								<div class="popLayerTop">
+									<h3 class="popLayerTot">차량정보가 등록되었습니다.<br />세부 모델을 선택해주세요!</h3>
+								</div>
+								<div class="popLayerInner">
+
+									<p class="srchCarResult">렉서스 IS[3세대]</p>
+									<ul class="srchCarLst">
+										<li>
+											<label class="inpArea radio big">
+												<input type="radio" id="test1" name="test" title="" checked="checked" /><span></span>
+												선택안함
+											</label>
+										</li>
+										<li>
+											<label class="inpArea radio big">
+												<input type="radio" id="test2" name="test" title="" /><span></span>
+												200t 프리미엄
+											</label>
+										</li>
+										<li>
+											<label class="inpArea radio big">
+												<input type="radio" id="test3" name="test" title="" /><span></span>
+												200t 슈프림
+											</label>
+										</li>
+										<li>
+											<label class="inpArea radio big">
+												<input type="radio" id="test4" name="test" title="" /><span></span>
+												200t F 스포트
+											</label>
+										</li>
+										<li>
+											<label class="inpArea radio big">
+												<input type="radio" id="test5" name="test" title="" /><span></span>
+												200t 이그제큐티브
+											</label>
+										</li>
+									</ul>
+
+									<p class="txtNotice"><span>세부 모델을 선택하지 않으면<br />기본 모델로 시세가 조회됩니다.</span></p>
+								</div>
+								<a href="#none" class="popLayerBtn">확인</a>
+								<a href="#none" class="popLayerClose">닫기</a>
+							</div>
+							<!-- e: 세부 모델 선택 -->
+						</div>
+
+
+
+
+						<a href="#none" class="popLayerClose wizardClose">닫기</a>
+					</div>
+				</div>
+				<!-- e: 차량번호 입력 레이어팝업 -->
+
+
+
+			</div>
+			<!-- e: container -->
+		</div>
+		<!-- e: section -->
+
+
+
+
+
+		<!-- s: footer -->
+		<div id="footer">
+			<div>
+				<!-- 공지사항 -->
+				<div class="ft-con ft-con1">
+					<div class="ft-inner">
+						<dl class="dl-notice clfix">
+							<dt class="tit"><span class="ico-notice"></span>공지사항</dt>
+							<dd>
+								<a href="#nolink" id="noticeOpenPop" data-noticeseq=""><span class="notice-subject"></span></a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- 신용정보사유 코드 조회 -->
+				<div class="ft-con ft-con2">
+					<div class="ft-inner">
+						<ul class="footer-menu">
+							<li class="last">
+								<span class="ft-input-wrap">
+									<input type="text" id="certi_code" name="certi_code" title="신용정보사유 코드조회" placeholder="신용정보사유 코드조회">
+									<button title="새창열림" class="btn-ft-search">검색하기</button>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 약관 영역 -->
+				<div class="ft-con ft-con3">
+					<div class="ft-inner">
+						<ul class="footer-menu">
+							<li>
+								<a href="#nolink" data-stplatcd="03"><strong>개인정보취급방침</strong></a>
+							</li>
+							<li class="last">
+								<a href="#nolink" data-stplatcd="06"><strong>개인정보처리방침</strong></a>
+							</li>
+						</ul>
+						<ul class="footer-menu">
+							<li>
+								<a href="#nolink" data-stplatcd="01">상품 이용약관</a>
+							</li>
+							<li class="last">
+								<a href="#nolink" data-stplatcd="02">웹서비스 이용약관</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ft-con  ft-con4">
+					<div class="ft-inner">
+						<address class="ft-addr">서울시 영등포구 국회대로74길 4(여의도동) NICE평가정보㈜</address>
+						<ul class="list-ft-info clfix">
+							<li>대표이사 심의영</li>
+							<li class="last">사업자등록번호 116-81-15020</li>
+						</ul>
+						<p class="txt-copyright">ⓒ NICE INFORMATION CO., LDT.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e: footer -->
+	</div>
+</body>
+</html>
