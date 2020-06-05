@@ -1,0 +1,183 @@
+@charset "euc-kr";
+
+/* s: 리뉴얼 이후 common에 중복클래스 확인 시 삭제 */
+.clfix:after {content:""; display:block; height:0px; clear:both; visibility:hidden; zoom:1;}
+.clfix {display:block;zoom:1;}
+/* e: 리뉴얼 이후 common에 중복클래스 확인 시 삭제 */
+
+#container {position: relative;}
+
+.sectorId {display: none;position: relative;z-index:2;}
+.sectorId.on {display: block;}
+.sectorPr {display: none;position: relative;z-index:2;}
+.sectorPr.on {display: block;}
+
+
+.loginSector {padding:10px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';}
+
+.loginDimmed {position: absolute;top:0;left:0;width:100%;background-color: none;height:auto;z-index:1;}
+.loginDimmed.st1 {height:auto;background-color:none;}
+
+/* 로그인 상단 탭 */
+.loginSector .loginTopMenu {position: relative;z-index:2;}
+.loginSector .loginTopMenu ul li {
+		float: right;
+		width: 49%;
+		font-size:14px;
+    border: 1px solid #999;
+		color: #999;
+    -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+}
+.loginSector .loginTopMenu ul li.on {
+    border: 1px solid #1c7ac9;
+    background-color: #1c7ac9;
+		color: #fff;
+}
+.loginSector .loginTopMenu ul li:first-child {float: left;}
+.loginSector .loginTopMenu ul li > a {padding: 12px 0 12px 0;display: block;text-align: center;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';font-weight: 700;}
+.loginSector .loginTopMenu ul li.on > a {}
+
+
+.loginSector .loginIdForm {height: 245px;border:1px solid #eee;border-radius:2px;margin-top:7px;background: rgba(255,255,255,0.85);}
+.loginSector .loginIdForm ul {padding:13px 12px 27px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.loginSector .loginIdForm ul li {display: block;}
+.loginSector .loginIdForm ul li.idParse {border-bottom:1px solid #bebebe;padding-top:15px;}
+.loginSector .loginIdForm ul li.idBtn {margin-top:28px;}
+.loginSector .loginIdForm ul li.idReset {margin-top:30px;background:url('../../../resource/img/bam/common/bg_login_reset.png') no-repeat 55% center;-webkit-background-size:auto 8px;background-size:auto 8px;}
+.loginSector .loginIdForm ul li input {width: 100%;border:0;height: 30px;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';font-size:13px;color:#777;background: none;}
+.loginSector .loginIdForm ul li input::placeholder {color:#777;}
+.loginSector .loginIdForm ul li .resetLeft {float: left;padding:0 7px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;width: 55%;text-align: center;}
+.loginSector .loginIdForm ul li .resetRight {float: right;padding:0 7px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;width: 45%;text-align: center;}
+.loginSector .loginIdForm ul li .resetAnchor {background:url('../../../resource/img/bam/common/ico_login_reset.png') no-repeat right center;padding-right:16px;-webkit-background-size:10px;background-size:10px;letter-spacing:-1px;color: #555;font-size:12px;}
+
+.loginSector .loginPrivate {margin-top:8px;}
+.loginSector .loginPrivate .privateTop {background-color: #656565;color: #fff;}
+.loginSector .loginPrivate .privateTop > a {
+	display: block;
+	padding:20px 30px 20px 50px;
+	font-size:12px;
+	letter-spacing:0px;
+	line-height: 17px;
+	background:url('../../../resource/img/bam/common/ico_login_hidden_alert.png'),url('../../../resource/img/bam/common/ico_login_hidden_bottom.png');
+	background-repeat:no-repeat,no-repeat;
+	background-position: 15px center,right 15px center;
+	-webkit-background-size:28px,16px auto;
+	background-size:28px,16px auto;
+	-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+}
+.loginSector .loginPrivate .privateTop > a.on {
+	background:url('../../../resource/img/bam/common/ico_login_hidden_alert.png'),url('../../../resource/img/bam/common/ico_login_hidden_up.png');
+	background-repeat:no-repeat,no-repeat;
+	background-position: 15px center,right 15px center;
+	-webkit-background-size:28px,16px auto;
+	background-size:28px,16px auto;
+}
+
+.loginSector .loginPrivate .privateHidden {background:url('../../../resource/img/bam/common/ico_login_hiddennum.png') no-repeat 15px 25px #f7f7f7;-webkit-background-size:29px;background-size:29px;padding:27px 0 28px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: none;}
+.loginSector .loginPrivate .privateHidden.on {display: block;}
+.loginSector .loginPrivate .privateHidden .hiddenInnerTxt {margin-top:28px;height: 24px;line-height: 15px;letter-spacing:-0.5px;padding:0 20px 0 50px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: flex;justify-content: left;align-items: center;}
+.loginSector .loginPrivate .privateHidden .hiddenInnerTxt:first-child {margin-top:0;}
+.loginSector .loginPrivate .privateHidden .hiddenBtn {margin-top:24px;padding:0 10px;}
+.loginSector .loginPrivate .privateHidden .hiddenBtn > a {display: block;height: 39px;line-height: 39px;background-color: #fff;color: #333;text-align: center;font-size:14px;font-weight: 700;border:1px solid #a2a2a2;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';}
+
+.loginSector .privateIdForm {height: 245px;border:1px solid #eee;border-radius:2px;margin-top:7px;background:rgba(255,255,255,0.85);}
+.loginSector .privateIdForm .innerPivate {padding:20px 12px 20px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.loginSector .privateIdForm .loginTitle {background:url('../../../resource/img/bam/common/blit_private_squre.png') no-repeat left center;-webkit-background-size:6px;background-size:6px;padding-left:13px;font-size:13px;letter-spacing:-1px;text-align: left;}
+.loginSector .privateIdForm .lawTxt {margin-top:9px;position: relative;}
+.loginSector .privateIdForm .lawTxt.first {margin-top:14px;padding-bottom:5px;}
+.loginSector .privateIdForm .lawTxt ul li {float: left;}
+.loginSector .privateIdForm .lawTxt ul li input[type="checkbox"].loginInpBig{
+	-webkit-appearance: none;
+	border: none;
+	border-radius:0;
+	width: 28px;
+	height: 28px;
+	padding:0;
+	background: url(../../../resource/img/bam/common/ico_privatecheck_big_off.png) no-repeat left top;
+	background-size: 28px 28px;
+	-webkit-background-size: 28px 28px;
+}
+.loginSector .privateIdForm .lawTxt ul li input[type="checkbox"].loginInpBig:checked{
+	background: url(../../../resource/img/bam/common/ico_privatecheck_big_on.png) no-repeat left top;
+	background-size: 28px 28px;
+	-webkit-background-size: 28px 28px;
+}
+
+
+.loginSector .privateIdForm .lawTxt ul li input[type="checkbox"].loginInpSmall{
+	-webkit-appearance: none;
+	border: none;
+	border-radius:0;
+	margin-left:6px;
+	width: 16px;
+	height: 16px;
+	padding:0;
+	background: url(../../../resource/img/bam/common/ico_privatecheck_big_off.png) no-repeat left top;
+	background-size: 16px 16px;
+	-webkit-background-size: 16px 16px;
+}
+.loginSector .privateIdForm .lawTxt ul li input[type="checkbox"].loginInpSmall:checked{
+	background: url(../../../resource/img/bam/common/ico_privatecheck_big_on.png) no-repeat left top;
+	background-size: 16px 16px;
+	-webkit-background-size: 16px 16px;
+}
+
+.loginSector .privateIdForm .lawTxt ul li.second {padding-left:10px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;color: #555;font-size:13px;letter-spacing: -1px;text-align: left;margin-top:-2px;}
+.loginSector .privateIdForm .lawTxt ul li.smallSecond {padding-left:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;color: #888;font-size:13px;letter-spacing: -1.5px;margin-top:-1px;}
+.loginSector .privateIdForm .lawTxt ul li.smallSecond > a {background-color: #ababab;color: #fff;font-size:12px;padding:0 5px;height: 18px;line-height: 17px;position: absolute;right:0;top:0;letter-spacing:-1px;}
+.loginSector .privateIdForm .lawTxt ul li.smallSecond .point {color: #0071bc;}
+
+.loginSector .privateIdForm .privateBtnArea {margin-top:28px;}
+.loginSector .privateIdForm .privateBtnArea ul {margin-top:15px;}
+.loginSector .privateIdForm .privateBtnArea ul li {float: left;width: 32%;text-align: center;margin-left:2%;}
+.loginSector .privateIdForm .privateBtnArea ul li:first-child {margin-left:0;}
+.loginSector .privateIdForm .privateBtnArea ul li > a {border:1px solid #c0c0c0;background-color: #fff;color: #4d4d4d;font-size:13px;padding:12px 0;display: block;}
+.loginSector .privateIdForm .privateBtnArea ul li > a > .icoPhone {background:url('../../../resource/img/bam/common/ico_private_phone.png') no-repeat left center;-webkit-background-size:10px auto;background-size:10px auto;padding-left:15px;letter-spacing:-0.5px}
+.loginSector .privateIdForm .privateBtnArea ul li > a > .icoCard {background:url('../../../resource/img/bam/common/ico_private_card.png') no-repeat left center;-webkit-background-size:15px auto;background-size:15px auto;padding-left:20px;letter-spacing:-0.5px}
+.loginSector .privateIdForm .privateBtnArea ul li > a > .icoIpin {background:url('../../../resource/img/bam/common/ico_private_ipin.png') no-repeat left center;-webkit-background-size:13px auto;background-size:13px auto;padding-left:18px;letter-spacing:-0.5px}
+
+
+.loginSector .privateUnder {margin-top:8px;}
+.loginSector .privateUnder .privateUnderTop {background-color: #656565;color: #fff;font-size:12px;letter-spacing:-0.5px;padding:0 13px;height:40px;line-height: 40px;}
+.loginSector .privateUnder .privateUnderTop .tip {border:1px solid #fff;padding:0px 7px;margin:0 5px 0 0;}
+.loginSector .privateUnder .privateUnderTxt {font-size:13px;line-height: 18px;background-color: #f7f7f7;color: #656565;letter-spacing:-1px;padding:15px 14px;}
+
+
+.privatePop {position: fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:1000;display: none;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';}
+.privatePop.on {display: block;}
+.privatePop .popInner {position: absolute;width:306px;left:50%;margin-left:-153px;top:50%;margin-top:-159px;background-color: #fff;padding:32px 25px 68px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.privatePop .popInner .closeLoginPop {position: absolute;right:10px;top:10px;background:url('../../../resource/img/bam/common/btn_loginpop-cls.png') no-repeat left center;-webkit-background-size:13px auto;background-size:13px auto;text-indent:-99999px;width: 13px;}
+.privatePop .popInner .popText {background:url('../../../resource/img/bam/common/blit_loginpop_squre.png') no-repeat left 3px;-webkit-background-size:6px auto;background-size:6px auto;padding-left:13px;margin-bottom:17px;letter-spacing:-0.5px;font-size:13px;line-height: 15px;}
+.privatePop .popInner .inputTxt {padding-top:10px;border-bottom:1px solid #d2d2d2;}
+.privatePop .popInner .inputTxt input {width: 100%;height: 36px;line-height: 36px;padding:0 5px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border:0;letter-spacing:-1px;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';font-size:13px;}
+
+.privatePop .popInner .popSubmit {position: absolute;bottom:0;;left:0;height:45px;line-height: 45px;background-color: #1c7ac9;color: #fff;font-size:14px;font-weight: 700;width:100%;text-align: center;letter-spacing:4px;}
+
+
+
+/* 확인버튼 로그인 게이지 제어 */
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {border-bottom-left-radius:0;}
+.ui-widget-content {border:0;}
+.ui-widget-content a {color:#fff;font-size:14px;font-weight: 700;}
+.ui-widget-header {background:#16609f;} /* 로딩바 색상 */
+.ui-progressbar {}
+.ui-progressbar .ui-progressbar-overlay {background:#1c7ac9;height: 100%;filter: alpha(opacity=100);opacity: 1;} /* 로딩 바 초기 색상 */
+#progressbar {width:100%;height:44px;position:relative;background:#1c7ac9;} /* 기본 로딩 중 배경색 */
+.progresslabel {
+		position:absolute;
+		width:100%;
+		text-align:center;
+		height: 44px;
+		line-height:44px;
+		font-size:14px;
+		font-weight:700;
+		color:white;
+}
+.ui-progressbar .ui-progressbar-value {margin: -1px;height: 100%;}
+#downloadbtn {position: absolute;width: 100%;height:44px;line-height: 44px;left:0;top:0;text-align: center;z-index:100;border:0;background:none;color: #fff;font-weight: 700;font-size:14px;font-family: 'NotoSansKR','NanumBarunGothic', '나눔바른고딕';}
+
+
+
+
+
+/* 끝 */

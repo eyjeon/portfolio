@@ -1,0 +1,78 @@
+@charset "euc-kr";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,input,label{margin:0;padding:0; list-style:none;}
+body {padding:0;margin:0;}
+img,fieldset,iframe{border:0 none}
+input,select,button,textarea{vertical-align:middle; font-family:'¸¼Àº °íµñ';}
+img{vertical-align:middle; border:0;}
+table{border-collapse:collapse;border-spacing:0}
+iframe{margin:0;padding:0}
+hr{display:none;}
+.placeholder{vertical-align:middle; font-family:'¸¼Àº °íµñ';}
+a{text-decoration:none; color:inherit; -webkit-tap-highlight-color:transparent;}
+body{color:#333; background:#fff; font-family:'¸¼Àº °íµñ';}
+caption,legend,
+.hidden {visibility:hidden;left:-9999em;margin:0;padding:0;font-size:0;line-height:0;width:0;height:0;overflow:hidden;}
+*:first-child+html .hidden{display:none}
+.pointR{; line-height:16px;color:#d03e4b !important}
+.pointB{;color:#776c61 !important;}
+input[type="checkbox"] {vertical-align:middle;}
+
+
+/*layout*/
+#clause_change_guide_pop div, #clause_change_guide_pop p, #clause_change_guide_pop input, #clause_change_guide_pop label, #clause_change_guide_pop h1, #clause_change_guide_pop h2, #clause_change_guide_pop h3,#clause_change_guide_pop h4,#clause_change_guide_pop td, #clause_change_guide_pop a, #clause_change_guide_pop li, #clause_change_guide_pop span, #clause_change_guide_pop strong {font-family:'¸¼Àº °íµñ'!important;line-height:1.4em!important;}
+#clause_change_guide_pop {width:715px;background:#004fab;} 
+#clause_change_guide_pop .clause_change_top {height:70px;padding:10px 0 0 36px;color:#fff;position:relative;}
+#clause_change_guide_pop .clause_change_top h2 {font-size:24px;font-weight:normal;color:#fff}
+#clause_change_guide_pop .clause_change_top p {font-size:14px;color:#fff}
+#clause_change_guide_pop .clause_change_top .c_btn_close {position:absolute;top:32px;right:34px;}
+
+#clause_change_guide_pop .clause_change_cont {padding:33px;background:#fff;margin:0 2px;}
+#clause_change_guide_pop .clause_change_cont .p_cont {border:1px solid #f0f0f0;padding:25px 36px 25px 36px;}
+#clause_change_guide_pop .clause_change_cont .p_cont .tit01 {font-size:24px;color:#5b5b5b;line-height:31px!important;}
+#clause_change_guide_pop .clause_change_cont .p_cont .b_color {font-size:27px;color:#004fab;font-weight:bold;}
+#clause_change_guide_pop .clause_change_cont .p_cont .txt01 {font-size:14px;color:#5b5b5b;margin-top:20px;}
+#clause_change_guide_pop .clause_change_cont .p_cont .staple_box {width:554px;height:70px;margin-top:22px;background:#f0f0f0 url(https://img.credit.co.kr/resource/img/baw/common/clause_bg_img1.gif) no-repeat right top;padding:13px 0 0 17px;}
+#clause_change_guide_pop .clause_change_cont .p_cont .staple_box p {color:#5c5c5c;font-size:16px;font-weight:bold;}
+#clause_change_guide_pop .clause_change_cont .p_cont .staple_box ul {margin-top:5px;}
+#clause_change_guide_pop .clause_change_cont .p_cont .staple_box ul li {color:#5c5c5c;font-size:12px;font-weight:bold;}
+#clause_change_guide_pop .clause_change_cont .p_cont h3 {background:url(../img/top_bar.gif) no-repeat left top;margin-top:22px;padding-top:11px;font-size:16px;color:#004fab;font-weight:bold;}
+#clause_change_guide_pop .clause_change_cont .p_cont .txt02 {color:#5b5b5b;font-size:14px;margin-top:21px;}
+#clause_change_guide_pop .clause_change_cont .p_cont .txt03 {margin-top:22px;color:#5b5b5b;font-size:12px;font-weight:bold;}
+
+.terms_comparative {height:205px;overflow-y:auto;border:1px solid #e1e1e1;margin-top:18px;}
+.terms_comparative table {width:552px;}
+.terms_comparative table th {height:32px;border-right:1px solid #dbdbdb;border-bottom:1px solid #e1e1e1;border-top:1px solid #3372bc;padding:3px 0;font-size:14px;background:#F0F0F0;}
+.terms_comparative table td {border-right:1px solid #dbdbdb;padding:0 10px;}
+.terms_comparative table td h4 {line-height:18px;margin-top:10px;}
+
+.terms_comparative table td  p {color:#333;}
+.terms_comparative table .line {border-bottom:1px solid #e1e1e1;padding-bottom:11px;display:table-cell;height:auto;margin:0;}
+#clause_change_guide_pop .terms_comparative table td h4 {font-size:12px!important;background:none;text-align:left;}
+#clause_change_guide_pop .terms_comparative table td ,#clause_change_guide_pop .terms_comparative table th{color:#333!important;}
+#clause_change_guide_pop .terms_comparative table td {font-size:12px;word-break:break-all;text-align:left}
+#clause_change_guide_pop .terms_comparative table td li {color:#333;}
+
+#clause_change_guide_pop .clause_change_foot {height:32px;color:#fff;padding:13px 0 0 36px;font-size:14px;}
+#clause_change_guide_pop .clause_change_foot input {vertical-align:top;margin-top:4px;}
+#clause_change_guide_pop .clause_change_foot label {font-size:14px; color:#fff;margin:0;}
+#clause_change_guide_pop .clause_change_foot a{font-size:14px;color:#fff}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+body, p{margin: 0; padding: 0;}
+body{line-height: 1; text-align: center; font-family: ³ª´®½ºÄù¾î, NanumSquareR; width: 1005; height: 100%;}
+
+.loadingPage{position: fixed; left: 0; top: 50%; width: 100%; margin-top: -107px;}
+.mainTxt{font-size: 24px; color: #222; font-weight: bold;}
+.subTxt{font-size: 16px; color: #646464; font-weight: bold; margin-top: 10px;}
+.loadingImg{margin: 35px 0; height: 64px;}
+.loadingImg img{height: 64px;}
+.logoImg img{height: 27px;}

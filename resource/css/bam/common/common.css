@@ -1,0 +1,70 @@
+@charset "euc-kr";
+/* CSS Document */
+
+/* care mobile web common css */
+/* 2016-05-04 create common.css : sya */
+
+.clfix:after {content:'';display:block;clear:both;}
+
+/*loading*/
+.loading2 {text-align:center;padding:0 5%;width:90%;}
+.loading2 * {font-family: '맑은 고딕', 'Malgun Gothic', verdana !important;font-size:18px}
+.loading2 .inner_loading {max-width:460px;margin:0 auto;width:100%;position:relative;text-align:left;background:url(../../../img/baw/common/bg_loading.png) no-repeat center 0;background-size:100% auto;-webkit-background-size:100% auto;-moz-background-size:100% auto;}
+.loading2 .inner_loading .img_loading {display:block;width:21%;top:0;padding:13.5% 0 13.5% 70%;text-align:right;}
+.loading2 .inner_loading .txt_loading {letter-spacing:-1px;position:absolute;top:26%;left:2em;color:#545454;}
+.loading2 .inner_loading .txt_loading strong {font-size:1.556em;display:block;line-height:1.214em;margin:0 0 0.278em -0.111em;color:#333;text-indent: 0.111em;}
+
+.loading2 img{display:inline-block;width:auto;max-width:100%;}
+
+/*common footer 2016-06-27 : sya */
+#footer {width:100%;margin:0;padding:0;background:none;border:none;font-size:11px;color:#111;}
+#footer * {font-family:'NanumGothic','나눔고딕'; font-size:11px;}/*160922 조창훈 수정*/
+#footer a:link, #footer a:visited, #footer a:hover, #footer a:active {text-decoration:none;font-size:11px;color:#111;letter-spacing:0px;}
+.ft-inner {max-width:620px;min-width:300px;margin:0 auto;padding:0 10px;}
+.ft-con {border-top:1px solid #c3c3c3;}
+.ft-con1 {height:30px;}
+.ft-con2 {background:#ededed;}
+.ft-con3 {background:#ededed;}
+.ft-inner .dl-notice {padding:0 0 0 65px;position:relative;line-height:29px;}
+.ft-inner .dl-notice .ico-notice {display:inline-block;width:8px;height:8px;vertical-align:middle;background:url(../../../img/bam/common/ico_footer_notice.png) no-repeat;background-size:8px auto;margin:0 3px 0 0;}
+.ft-inner .dl-notice .tit {position:absolute;top:0;left:0;width:65px;background:url(../../../img/bam/common/ico_footer_dot.png) 58px center no-repeat;background-size:auto 2px;}
+.ft-inner .dl-notice dd a{display:block;position:relative;padding:0 55px 0 0;}
+.ft-inner .dl-notice .notice-date {display:block;position:absolute;right:0;top:0;}
+.ft-inner .dl-notice .notice-subject {display:block;max-width:460px;min-width:160px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.ft-inner .footer-menu {display:table;table-layout:fixed;width:100%;}
+.ft-inner .footer-menu li {display:table-cell;height:30px;background:url(../../../img/baw/common/bg_footer_bar.png) right center no-repeat;background-size:1px auto; }/*160921 조창훈 수정*/
+.ft-inner .footer-menu li a {display:block;text-align:center;line-height:31px;}
+.ft-inner .ft-input-wrap {display:block;height:18px;position:relative;padding:0 15px 0 0;border:1px solid #8f8f8f;}/*160921 조창훈 수정*/
+.ft-inner .ft-input-wrap input {margin:0;padding:0 3%;border:none;background:none;-webkit-appearance: none;width:100%;font-size:0.909em;color:#111;height:18px;line-height:19px;}
+.ft-inner .ft-input-wrap .btn-ft-search {border:none;margin:0;padding:0;display:block;width:15px;height:17px;position:absolute;top:0;right:0;background:url(../../../img/bam/common/ico_footer_search.png) center center no-repeat;background-size:9px auto;text-indent:130%;white-space:nowrap;overflow:hidden;cursor:pointer;}
+.ft-inner .footer-menu li.last {background:none;}
+.ft-con4  .ft-inner{padding:8px 0 10px;}
+#footer .ft-inner .ft-addr {font-size:1.091em;color:#545454 !important;margin:0; height: auto !important; padding:0;}/*160921 조창훈 수정*/
+.ft-inner .list-ft-info {text-align:center;}
+.ft-inner .list-ft-info li{display:inline-block;font-size:1.091em;color:#545454;padding:0 5px;background:url(../../../img/baw/common/bg_footer_bar.png) right center no-repeat;background-size:1px auto; float:none;}/*160921 조창훈 수정*/
+.ft-inner .list-ft-info li.last {background:none;}
+.ft-inner .txt-copyright {display:block;color:#545454;font-size:1.091em;margin:5px 0 0 0;text-align:center;}
+.ft-inner .ico-new {display:inline-block;width:35px;height:14px;background:url(../../../img/bam/common/ico_newx2.png) 0 0 no-repeat;text-indent:-999px;overflow:hidden;vertical-align:middle;margin: 0 3px 0 0;background-size: auto 14px;}
+@media all and (max-width: 380px) {
+.loading2 * {font-size:11px}
+}
+
+@media all and (min-width: 381px) and (max-width: 460px) {
+.loading2 * {font-size:14px}
+}
+
+/*주차비 할인쿠폰 - 개인정보 제3자 제공동의*/
+.grayBox2{background-color: #f4f4f4; padding: 15px 20px; border: 1px solid #c6c6c6; border-top: none; word-break: keep-all;}
+.grayBox2 .textBox{font-weight: bold; color: #545454; font-size: 0.8em; line-height: 1.200em;}
+.thirdPartyAgreeBox{position: relative;}
+.thirdPartyAgreeBox .thirdPartyAgreeLabel{display: block; font-size: 14px; font-weight: bold; padding-top: 10px;}
+.thirdPartyAgreeBox .thirdPartyAgreeInput{position: absolute; top: 0; right: 0; width: 33px; height: 33px; overflow: hidden; -webkit-appearance: none;   -moz-appearance: none; appearance: none; background-size: 100% auto;}
+.thirdPartyAgreeBox .thirdPartyAgreeTxt{background-color: #fff; margin-top: 15px; padding: 10px; height: 140px; overflow: auto; word-break: break-all;}
+.thirdPartyAgreeDl{word-break: keep-all;}
+.thirdPartyAgreeDl>dt{padding: 0; background: none; font-weight: bold; color: #545454; font-size: 0.8em; line-height: 1.200em;}
+.thirdPartyAgreeDl>dt+dd{margin-top: 8px;}
+.thirdPartyAgreeDl>dd{color: #111; font-size: 0.8em; color: #545454; line-height: 1.267em;}
+
+/*폰트사이즈*/
+.fs11{font-size: 11px;}
+.fs12{font-size: 12px;}

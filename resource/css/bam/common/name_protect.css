@@ -1,0 +1,183 @@
+@charset "euc-kr";
+/*release date 170720*/
+
+.clfix:after {content:""; display:block; height:0px; clear:both; visibility:hidden; zoom:1;}
+.clfix {display:block;zoom:1;}
+/*명의보호 요약*/
+/*.npLevelBox{position: relative; margin:0 auto; width: 240px; height: 127px; background: url('../../../img/bam/common/bg_ns_level.png') center top no-repeat; background-size: 100% auto;}*/
+.npLevelBox{text-align: center; padding: 10px 0;}
+.npLevelBox > img{height: 121px;}
+
+/*명의보호 설정*/
+.nsSlideBarWrap .nsSlideBar{position: relative;}
+.nsSlideBarWrap .nsSlideBar .nsSlideBarIn{width: 0; height: 0; line-height: 0; overflow: hidden; border: none; padding: 0; position: absolute;}
+.nsSlideBarWrap .ui-slider{position: relative; height: 40px; border-radius: 20px; background: #ededed; margin-bottom: 20px;}
+.nsSlideBarWrap .nsSlideIcon{width: 40px; padding-top: 45px; position: absolute; top: 0; text-align: center; z-index: 1; line-height: 1; color: #d7d7d7; font-size: 13px;}
+.nsSlideBarWrap .nsSlideIcon.type1{background: url('../../../img/bam/common/ns_slide_ico_1.png') center 0 no-repeat; background-size: 100% auto; left: 10px;}
+.nsSlideBarWrap .nsSlideIcon.type2{background: url('../../../img/bam/common/ns_slide_ico_2.png') center 0 no-repeat; background-size: 100% auto; left: 50%; margin-left: -20px;}
+.nsSlideBarWrap .nsSlideIcon.type3{background: url('../../../img/bam/common/ns_slide_ico_3.png') center 0 no-repeat; background-size: 100% auto; right: 10px;}
+.nsSlideBarWrap .ui-slider-track{height: 40px; position: relative; margin:0 10px; z-index: 10;}
+.nsSlideBarWrap .ui-slider-handle{position: absolute;z-index: 20;width: 40px;cursor: default;-ms-touch-action: none;touch-action: none; top: 0; margin-left: -20px; padding-top: 45px; font-size: 13px; color: #4296f0; line-height: 1;}
+.nsSlideBarWrap .ui-slider-handle::after{display:block; text-align: center; background: #fff;}
+.nsSlideBarWrap .ui-slider-handle[title='1']{background: url('../../../img/bam/common/ns_slide_ico_1_1.png') center 0 no-repeat; background-size: 100% auto; margin-left: 0;}
+.nsSlideBarWrap .ui-slider-handle[title='1']::after{content: '차단';}
+.nsSlideBarWrap .ui-slider-handle[title='2']{background: url('../../../img/bam/common/ns_slide_ico_2_1.png') center 0 no-repeat; background-size: 100% auto;}
+.nsSlideBarWrap .ui-slider-handle[title='2']::after{content: '알림';}
+.nsSlideBarWrap .ui-slider-handle[title='3']{background: url('../../../img/bam/common/ns_slide_ico_3_1.png') center 0 no-repeat; background-size: 100% auto; margin-left: -40px;}
+.nsSlideBarWrap .ui-slider-handle[title='3']::after{content: '해제';}
+
+.nsSlideList > li{padding: 10px;}
+.nsSlideList > li+li{border-top: 1px dotted #dcdcdc;}
+.nsSlideList > li > dl > dt,
+.nsSlideList > li > dl > dd{float:left;}
+.nsSlideList > li > dl > dt{width: 25%; font-weight: bold; color: #4296f0; height: 40px; line-height: 40px;}
+.nsSlideList > li > dl > dd{width: 75%}
+.nsSlideList > li > dl.nsSlideTitleWrap > dt{height: auto; line-height: 1;}
+.nsSlideList > li .nsSlideTitle{position: relative; height: 18px;}
+.nsSlideList > li .nsSlideTitle > div{position: absolute; top: 0; font-size: 11px; color: #7c7c7c; font-weight: bold; width: 40px; text-align: center;}
+.nsSlideList > li .nsSlideTitle > div.con1{left: 10px;}
+.nsSlideList > li .nsSlideTitle > div.con2{left: 50%; margin-left: -20px;}
+.nsSlideList > li .nsSlideTitle > div.con3{right: 10px;}
+
+.nsSlideBarWrap.type2 .ui-slider{margin-bottom: 0;}
+.nsSlideBarWrap.type2 .nsSlideIcon{padding-top: 40px;}
+.nsSlideBarWrap.type2 .ui-slider-handle{padding-top: 40px;}
+.nsSlideBarWrap.type2 .ui-slider-handle[title='1']::after{content: none;}
+.nsSlideBarWrap.type2 .ui-slider-handle[title='2']::after{content: none;}
+.nsSlideBarWrap.type2 .ui-slider-handle[title='3']::after{content: none;}
+
+.nsSlideBarWrap.type3 .ui-slider-track{width: 50%; float: right; margin-left: 0;}
+.nsSlideBarWrap.type3 .ui-slider-handle[title='2']{margin-left: -10px;}
+
+/*명의보호 내역*/
+.nsRecList{border-top: 1px solid #4296f0;}
+.nsRecList > li{border-bottom: 1px solid #dcdcdc;}
+.nsRecList > li a{display: block; padding-right: 17px; background: url('../../../img/bam/common/ns_arr_r.png') right 10px center no-repeat; background-size: 5px auto;}
+.nsRecList > li .nsRecInner{padding: 5px 10px; line-height: 20px;}
+.nsRecList > li .nsRecInner .nsRecTit,
+.nsRecList > li .nsRecInner .nsRecCount{line-height: 20px;}
+.nsRecList > li .nsRecInner .nsRecTit{float:left; padding-left: 25px; color: #3a4559; font-size: 13px; font-weight: bold;}
+.nsRecList > li.con1 .nsRecInner .nsRecTit{background: url('../../../img/bam/common/ns_ico_1.png') 0 center no-repeat; background-size: 16px auto;}
+.nsRecList > li.con2 .nsRecInner .nsRecTit{background: url('../../../img/bam/common/ns_ico_2.png') 0 center no-repeat; background-size: 16px auto;}
+.nsRecList > li.con3 .nsRecInner .nsRecTit{background: url('../../../img/bam/common/ns_ico_3.png') 0 center no-repeat; background-size: 16px auto;}
+.nsRecList > li .nsRecInner .nsRecCount{float:right; color: #737373; }
+.nsRecList > li .nsRecInner .nsRecCount .nsRecCountNum{color: #4296f0; font-weight: bold; font-style: italic;}
+
+/*명의보호 전체 인증별 전환*/
+.nsSlideTabWrap{margin-top: 8px;}
+.nsSlideTabWrap .nsSlideTab{position: relative; height: 15px; border-radius: 15px; background: #ededed; width: 80px; float: right;}
+.nsSlideTabWrap .nsSlideTab .nsSlideTabIn{width: 0; height: 0; line-height: 0; overflow: hidden; border: none; padding: 0; position: absolute;}
+.nsSlideTabWrap .nsSlideIcon{width: 40px; height: 15px; line-height: 15px; position: absolute; top: 0; text-align: center; z-index: 1; color: #939393; font-size: 8px;}
+.nsSlideTabWrap .nsSlideIcon.type1{left: 0;}
+.nsSlideTabWrap .nsSlideIcon.type2{right: 0;}
+.nsSlideTabWrap .ui-slider-track{height: 15px; position: relative; z-index: 10;}
+.nsSlideTabWrap .ui-slider-handle{position: absolute;z-index: 20;width: 40px; height: 15px; cursor: default;-ms-touch-action: none;touch-action: none; top: 0; background: #0071bc; border-radius: 15px;text-align: center; color: #fff; font-size: 8px; line-height: 15px;}
+.nsSlideTabWrap .ui-slider-handle::after{display:block; }
+.nsSlideTabWrap .ui-slider-handle[title='1']{ margin-left: 0;}
+.nsSlideTabWrap .ui-slider-handle[title='1']::after{content: '전체';}
+.nsSlideTabWrap .ui-slider-handle[title='2']{margin-left: -40px;}
+.nsSlideTabWrap .ui-slider-handle[title='2']::after{content: '인증별';}
+
+.nsTabBox .nsTabCon > li{display: none;}
+.nsTabBox .nsTabCon > li.active{display: block;}
+.nsTabBox .nsTabBar{margin-bottom: 15px;}
+.nsTabBox .nsTabBar > li{float:left; width: 50%; }
+.nsTabBox .nsTabBar > li a{display: block; background: #ededed; color: #9e9e9e; font-size: 13px; text-align: center; height: 32px; line-height: 32px;}
+.nsTabBox .nsTabBar > li a.active{background: #4296f0; color: #fff;}
+
+/*일시해제*/
+.nsLiftBox{background: #f4f4f4; color: #474747; line-height: 1.5; padding: 18px; margin: 8px 0; position: relative;}
+.nsLiftBox .btnNsLift{position: absolute; right:33px; top:50%; font-weight: bold; color: #b0b0b2; width: 50px; padding-top: 45px; height: 15px; line-height: 15px; background: url('../../../img/bam/common/btn_ns_lift_1.png') center 0 no-repeat; background-size: 42px auto; text-align: center; margin-top: -30px;}
+.nsLiftBox .btnNsLift.active{background: url('../../../img/bam/common/btn_ns_lift_2.png') center 0 no-repeat; background-size: 42px auto; color: #4194f0;}
+
+.nsBasicTextBox{background: #f7f7f7; padding: 18px; color: #595959; word-break: keep-all;}
+
+.nsInfoList{background: #f7f7f7;}
+.nsInfoList > li{padding: 13px 13px 13px 75px; min-height: 40px;}
+.nsInfoList > li dl dt{font-weight: bold; color: #4296f0;}
+.nsInfoList > li dl dd{color: #595959;}
+.nsInfoList > li+li{border-top: 1px dotted #dcdcdc;}
+.nsInfoList.type1 > li.con1{background: url('../../../img/bam/common/ns_ico_6.png') 7px center no-repeat; background-size: 62px auto;}
+.nsInfoList.type1 > li.con2{background: url('../../../img/bam/common/ns_ico_7.png') 7px center no-repeat; background-size: 62px auto;}
+.nsInfoList.type1 > li.con3{background: url('../../../img/bam/common/ns_ico_8.png') 7px center no-repeat; background-size: 62px auto;}
+.nsInfoList.type2 > li.con1{background: url('../../../img/bam/common/ns_ico_9.png') 20px center no-repeat; background-size: 40px auto;}
+.nsInfoList.type2 > li.con2{background: url('../../../img/bam/common/ns_ico_10.png') 20px center no-repeat; background-size: 40px auto;}
+.nsInfoList.type2 > li.con3{background: url('../../../img/bam/common/ns_ico_11.png') 20px center no-repeat; background-size: 40px auto;}
+
+/*명의 인증 내역 조회*/
+.nsSearchWrap{margin-top: 20px;}
+input[type=date]{appearance: none; -moz-appearance: none; -webkit-appearance: none;}
+.nsSearchWrap .nsSearchTop select,
+input[type=date]{display:block; width: 100%; margin-bottom: 10px; box-sizing: border-box; height:30px; line-height:28px; padding:0 30px 0 10px !important; border-radius: 2px; border: 1px solid #bebebe; font-size: 12px; background: url('../../../img/bam/common/ns_select_1.png') right top no-repeat #fcfcfc !important; background-size: auto 100% !important; box-shadow:0 0 2px rgba(0,0,0,0.2) inset; }
+.nsSearchWrap .nsSearchTop .nsDateSelect{margin-left: -1%;}
+.nsSearchWrap .nsSearchTop .nsDateSelect > li{float:left; width: 19%; margin-left: 1%;}
+.nsSearchWrap .nsSearchTop .nsDateSelect > li > a{display: block; text-align: center; border: 1px solid #dcdcdc; border-radius: 2px; height: 20px; line-height: 20px; color: #737373; background: #ededed;}
+.nsSearchWrap .nsSearchTop .nsDateSelect > li > a.active{border-color: #2284ee; background: #4296f0; color: #fff;}
+.nsSearchWrap .nsSearchTop .inputMailBox{margin-top: 10px;}
+
+.nsSearchWrap .nsSearchBottom{margin-top: 30px;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultListWrap{border-top: 1px solid #c0c0c0;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultListWrap > dt{position: relative; border-bottom: 1px solid #c0c0c0; background: #f5f5f5; padding: 12px 10px; font-weight: bold; color: #4d4d4d;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultListWrap > dt .btnEdit,
+.nsSearchWrap .nsSearchBottom .nsSearchResult > dt .btnDel{position: absolute; right: 10px; top: 50%; margin-top: -11px; width: 50px; height: 20px; line-height: 20px; text-align: center; border-radius: 2px;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultListWrap > dt .btnEdit{ border: 1px solid #0f77da; background: #fff; color: #4296f0;}
+.nsSearchWrap .nsSearchBottom .nsSearchResult > dt{position: relative; border-bottom: 1px solid #c0c0c0; padding: 8px 0; text-align: center; font-weight: bold; color: #333;}
+.nsSearchWrap .nsSearchBottom .nsSearchResult > dt .num{position: absolute; left: 10px; top: 50%; margin-top: -10px; height: 20px; line-height: 20px; color: #4296f0;}
+.nsSearchWrap .nsSearchBottom .nsSearchResult > dt .num label{line-height: inherit; color: #4296f0 !important;}
+.nsSearchWrap .nsSearchBottom .nsSearchResult > dt .num .numCheck{width: 15px; height: 15px; line-height:inherit; vertical-align: middle; margin-right: 5px;}
+.nsSearchWrap .nsSearchBottom .nsSearchResult > dt .btnDel{border: 1px solid #dcdcdc; background: #ededed; color: #737373;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultList > li,
+#moreBtn{border-bottom: 1px solid #c0c0c0;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultList > li.listLast,
+.nsSearchWrap .nsSearchBottom .nsSearchResultList > li.listNone{text-align: center;}
+#moreBtn{display: block; padding: 8px 0; text-align: center;}
+#moreBtn .more{color: #4d4d4d; padding-right: 10px; background: url('../../../img/bam/common/ns_arr_d.png') right center no-repeat; background-size: 6px auto;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultList > li.listNone{padding: 17px 0; font-weight: bold; color: #4d4d4d;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn{padding: 15px;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn > li{margin: 2px;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn > li > dl > dt,
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn > li > dl > dd{line-height: 15px; color: #4d4d4d;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn > li > dl > dt{float:left;width: 30%; font-weight: bold;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn > li > dl > dd{float:right;width: 69%; text-align: right; word-break: break-all;}
+.nsSearchWrap .nsSearchBottom .nsSearchResultIn > li > dl > dd a{color: #4296f0; text-decoration: underline !important;}
+
+/*명의보호 10계명*/
+.nsBasicBtn{display: block; height: 21px; line-height: 21px; border-radius: 2px; background: #fff; width: 170px; text-align: center; color: #4296f0; border: 1px solid #0d76d9; margin: 0 auto;}
+
+/*신고센터*/
+.nsRpCenterList > li{margin-top: 10px;}
+.nsRpCenterList > li a{display: block; border: 2px solid #4296f0; position: relative; height: 60px; line-height: 60px; text-align: center; padding-right: 100px;}
+.nsRpCenterList > li a img{height: 100%;}
+.nsRpCenterList > li a .nsRpBtn{position: absolute; right: 0; top: 0; width: 100px; text-align: center; color: #fff; background: #4296f0; height: 60px; line-height: 60px; font-size: 13px;}
+.nsCenterList > li+li{margin-top: 6px;}
+.nsCenterList > li a{color: #737373; position: relative; display: block;}
+.nsCenterList > li a .nsCenterDirect{color: #3f444a; position: absolute; right: 0; top: 0; padding-right: 10px; background: url('../../../img/bam/common/ns_arr_r.png') right center no-repeat; background-size: auto 7px;}
+
+/*170110 명의보호 요약 추가*/
+.nsLevelStatusBox{}
+.nsLevelStatusUl > li{float: left; width: 33.333%; text-align: center;}
+.nsLevelStatusUl > li.mid{ width: 33.334%;}
+.nsLevelStatusUl > li .tit{font-size: 12px; font-weight: bold; color: #474747; margin-bottom: 6px;}
+.nsLevelStatus{width: 40px; padding-top: 45px; font-size: 13px; color: #d7d7d7; line-height: 1; margin: 0 auto; background-size: 100% auto; background-position: center top; background-repeat: no-repeat;}
+.nsLevelStatus.on{color: #4296f0;}
+.nsLevelStatus.status1{background-image: url('../../../img/bam/common/ns_slide_ico_1_2.png');}
+.nsLevelStatus.status1.on{background-image: url('../../../img/bam/common/ns_slide_ico_1_1.png');}
+.nsLevelStatus.status1::after{content: '차단';}
+.nsLevelStatus.status2{background-image: url('../../../img/bam/common/ns_slide_ico_2_2.png');}
+.nsLevelStatus.status2.on{background-image: url('../../../img/bam/common/ns_slide_ico_2_1.png');}
+.nsLevelStatus.status2::after{content: '알림';}
+.nsLevelStatus.status3{background-image: url('../../../img/bam/common/ns_slide_ico_3_2.png');}
+.nsLevelStatus.status3.on{background-image: url('../../../img/bam/common/ns_slide_ico_3_1.png');}
+.nsLevelStatus.status3::after{content: '해제';}
+
+.inputMailBox{position: relative;}
+.inputMailBox .inputMailInner,
+.inputMailBox .emailAt{float:left;}
+.inputMailBox .inputMailInner{width: 50%; box-sizing: border-box; padding-right: 10px;}
+.inputMailBox .inputMailInner.type2{padding-right: 0; padding-left: 10px;}
+.inputMailBox .inputMailInner input,
+.inputMailBox .inputMailInner select{display:block; width: 100%; padding: 0 10px; margin: 0;}
+.inputMailBox .emailAt{width: 20px; font-size: 15px; color: #585d62; position: absolute; text-align: center; left: 50%; top: 0; margin-left: -10px; height: 30px; line-height: 30px;}
+.btnBox{text-align: center; margin-top: 12px;}
+.btnBox+.btnBox{margin-top: 25px;}
+.btnBasic{display:inline-block; height: 30px; line-height: 28px; border-radius: 2px; background: #4296f0; width: 100%; text-align: center; color: #fff; border: 1px solid #2284ee; box-sizing: border-box;}

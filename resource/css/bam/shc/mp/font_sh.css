@@ -1,0 +1,37 @@
+@charset "euc-kr";
+
+
+
+@font-face{
+  font-family:'shinhansebit';
+  src:url(../font/ShinhanCardB.eot); /* IE9 Compat Modes */
+  src:url(../font/ShinhanCardB.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+      url(../font/ShinhanCardB.woff) format('woff'), /* Modern Browsers */
+      url(../font/ShinhanCardB.woff2) format('woff2'), /* Modern Browsers */
+      url(../font/ShinhanCardB.ttf) format('truetype'), /* Safari, Android, iOS */
+      url(../font/ShinhanCardB.svg) format('svg'); /* Legacy iOS */
+  font-weight:700;
+  font-style:normal;
+}
+@font-face{
+  font-family:'shinhansebit';
+  src:url(../font/ShinhancardM.eot); /* IE9 Compat Modes */
+  src:url(../font/ShinhancardM.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+      url(../font/ShinhancardM.woff) format('woff'), /* Modern Browsers */
+      url(../font/ShinhancardM.woff2) format('woff2'), /* Modern Browsers */
+      url(../font/ShinhancardM.ttf) format('truetype'), /* Safari, Android, iOS */
+      url(../font/ShinhancardM.svg) format('svg'); /* Legacy iOS */
+  font-weight:400;
+  font-style:normal;
+}
+@font-face{
+  font-family:'shinhansebit';
+  src:url(../font/ShinhanCardL.eot); /* IE9 Compat Modes */
+  src:url(../font/ShinhanCardL.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+      url(../font/ShinhanCardL.woff) format('woff'), /* Modern Browsers */
+      url(../font/ShinhanCardL.woff2) format('woff2'), /* Modern Browsers */
+      url(../font/ShinhanCardL.ttf) format('truetype'), /* Safari, Android, iOS */
+      url(../font/ShinhanCardL.svg) format('svg'); /* Legacy iOS */
+  font-weight:300;
+  font-style:normal;
+}
