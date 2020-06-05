@@ -1,0 +1,214 @@
+@charset "euc-kr";
+/* 20200219 ºˆ¡§ π›øµ */
+
+
+
+
+
+
+
+
+
+/***************************************************************************** ∞¯≈Îøµø™ *****************************************************************************/
+#header{border:none}
+.mainSwipe{margin-bottom:35px;padding:0}
+.mainSwipe .slick-dots{position:absolute;top:-14px;left:30px;font-size:0}
+.mainWrap.type2 .mainSwipe{margin-bottom:25px}
+.mainWrap.type2 .mainSwipe .slick-dots{top:-27px}
+.mainSwipe .slick-dots > li{display:inline-block;margin-left:2px;font-size:0;vertical-align:top}
+.mainSwipe .slick-dots > li:first-child{margin-left:0}
+.mainSwipe .slick-dots button{display:inline-block;width:13px;height:2px;padding:0;border:none;background:#b3b3b3;color:transparent;font-size:0;text-indent:-999px;vertical-align:top;transition:all 0.2s linear}
+.mainSwipe .slick-dots .slick-active button{width:25px;background:#212121}
+.mainWrap .mainPlay{display:block;overflow:hidden;position:absolute;top:9px;left:20px;width:6px;height:7px;background:url('../../../../img/bam/hdc/cc/main/btn_play_pause.png') left -7px no-repeat;background-size:100% auto;color:transparent;text-indent:-999px}
+.mainWrap .mainPlay.pause{background-position:left top}
+
+
+
+.mainWrap{position:relative;margin-top:20px}
+.mainWrap.type1{padding-top:25px}
+.mainWrap.type2{padding-top:38px}
+.mainWrap .mainTit{position:absolute;top:0;right:20px;height:20px;text-align:right}
+.mainWrap .mainTit img{width:auto;height:100%}
+
+
+
+.mainCon{overflow:hidden;outline:none}
+.mainInner{display:block;position:relative;max-width:400px;height:262px;margin:0 auto}
+.mainWrap.type2 .mainInner{max-width:100%;height:258px}
+.mainTxtWrap{position:absolute;top:41px;left:20px;width:calc(100% - 40px);height:160px;text-align:left}
+.mainTxtWrap.type2{top:62px}
+.mainWrap.type2 .mainTxtWrap{top:30px}
+.mainWrap.type2 .mainTxtWrap.type2{top:54px}
+.mainTxt{display:inline-block;position:absolute;height:33px;margin-top:20px;vertical-align:top;opacity:0}
+.mainTxt:nth-child(1){top:0}
+.mainTxt:nth-child(2){top:40px}
+.mainTxt:nth-child(3){top:80px}
+.mainTxt:nth-child(4){top:120px}
+.mainTxt img{position:relative;width:auto;height:100%}
+.btnMainVis{position:absolute;bottom:28px;left:40px;padding-bottom:4px;border-bottom:3px solid #333333;color:#1a1a1a;font-family:'NanumSquareR';font-size:14px;font-weight:700;opacity:0}
+
+.mainVisual{position:absolute;top:0;right:0;width:100%;height:100%}
+.mainVisBg{position:absolute;opacity:0}
+.mainCon.on .mainVisBg{opacity:1}
+.mainVisBg img{height:100%}
+.mainVisElem{position:absolute;bottom:1px;margin-right:15px;background-position:left top;background-repeat:no-repeat;background-size:100% 100%;opacity:0}
+
+.mainVisImg{overflow:hidden;height:256px}
+.mainVisImg img{display:block;transform:scale(1.2)}
+.mainCon.imgType .btnMainVis{bottom:58px;border-color:#ffffff;color:#ffffff;font-weight:400}
+.mainCon.imgType.on .mainTxt{animation:mainTxt2 0.6s ease-out forwards}
+@keyframes mainTxt2{
+    0%{margin-left:20px;opacity:0}
+    100%{margin-left:0;opacity:1}
+}
+
+
+
+/* active */
+.mainCon.on .mainTxt{animation:mainTxt 0.8s cubic-bezier(0, 0.74, 0.51, 1.72) forwards}
+.mainCon.on .mainTxt:nth-child(2){animation-delay:0.1s}
+.mainCon.on .mainTxt:nth-child(3){animation-delay:0.2s}
+.mainCon.on .mainTxt:nth-child(4){animation-delay:0.3s}
+@keyframes mainTxt{
+    0%{margin-top:20px;opacity:0}
+    100%{margin-top:0;opacity:1}
+}
+.mainCon.on .mainTxt.on:before{content:'';display:block;position:absolute;bottom:-1px;left:0;width:0;height:11px;animation:mainTxtOn 0.4s ease-out forwards}
+.mainCon.on .mainTxt.on:nth-child(1):before{animation-delay:1.2s}
+.mainCon.on .mainTxt.on:nth-child(2):before{animation-delay:1.6s}
+.mainCon.on .mainTxt.on:nth-child(3):before{animation-delay:2.0s}
+.mainCon.on .mainTxt.on:nth-child(4):before{animation-delay:2.4s}
+@keyframes mainTxtOn{
+    0%{width:0}
+    100%{width:100%}
+}
+.mainCon.on .btnMainVis{animation:btnMainVis 0.5s linear 0.7s forwards}
+@keyframes btnMainVis{
+    0%{left:40px;opacity:0}
+    100%{left:20px;opacity:1}
+}
+.mainCon.on .mainVisElem{animation:mainVisElem 0.5s ease-out 0.8s forwards}
+@keyframes mainVisElem{
+    0%{margin-right:20px;opacity:0}
+    100%{margin-right:0;opacity:1}
+}
+.mainCon.on .mainVisImg img{animation:mainVisImg 4s ease-out forwards}
+@keyframes mainVisImg{
+    0%{transform:scale(1.2)}
+    100%{transform:scale(1)}
+}
+
+
+
+.mainCs{padding-bottom:5px;font-family:'NanumSquareR'}
+.mainCsTit{margin-bottom:6px;font-size:13px}
+.mainCsBx{display:table;table-layout:fixed;width:100%;padding:7px 0}
+.mainCsBx:nth-child(2n){background-color:#eeeeee}
+.mainCsBx > *{display:table-cell;color:#444444;text-align:right;vertical-align:top}
+.mainCsTit2{padding-top:3px;font-size:12px}
+.mainCsTel{width:105px;padding-right:15px;font-family:'NanumSquareRound';font-size:15px;font-weight:800}
+
+
+.mainInfo{position:relative;margin:0 20px 20px;padding-left:7px;color:#aeaeae;font-size:11px;word-break:keep-all}
+.mainInfo:before{content:'*';display:block;position:absolute;top:2px;left:0}
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************** ºÓ«Œ∆— *****************************************************************************/
+.mainConShop01.on .mainTxt.on:before{background-color:#ff807c}
+.mainConShop02.on .mainTxt.on:before{background-color:#00b3e3}
+.mainConShop03.on .mainTxt.on:before{background-color:#dcdcdc}
+.mainConShop04.on .mainTxt.on:before{background-color:#83dbe0}
+.mainConShop05.on .mainTxt.on:before{background-color:#9800af}
+.mainConShop01.on .mainTxt.on:nth-child(3):before,
+.mainConShop02.on .mainTxt.on:nth-child(1):before,
+.mainConShop03.on .mainTxt.on:nth-child(2):before,
+.mainConShop04.on .mainTxt.on:nth-child(1):before,
+.mainConShop05.on .mainTxt.on:nth-child(3):before{animation-delay:1.2s}
+.mainConShop03.on .mainTxt.on:nth-child(3):before{animation-delay:1.6s}
+
+.mainWrap.shopping .mainVisBg{bottom:0;right:-32px;height:195px}
+.mainConShop01.on .mainVisElem{right:15px;width:131px;height:253px;background-image:url('../../../../img/bam/hdc/cc/main/img_shopping01_02.png')}
+.mainConShop02.on .mainVisElem{right:5px;width:136px;height:240px;background-image:url('../../../../img/bam/hdc/cc/main/img_shopping02_02.png')}
+.mainConShop03.on .mainVisElem{right:-52px;width:202px;height:258px;background-image:url('../../../../img/bam/hdc/cc/main/img_shopping03_02.png')}
+.mainConShop04.on .mainVisElem{right:-5px;bottom:-1px;width:164px;height:225px;background-image:url('../../../../img/bam/hdc/cc/main/img_shopping04_02.png')}
+.mainConShop05.on .mainVisElem{right:18px;width:142px;height:248px;background-image:url('../../../../img/bam/hdc/cc/main/img_shopping05_02.png')}
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************** «√∑π¿Ã∆— *****************************************************************************/
+.mainConPlay01.on .mainTxt.on:before{background-color:#4edcff}
+.mainConPlay02.on .mainTxt.on:before{background-color:#9322fc}
+.mainConPlay03.on .mainTxt.on:before{background-color:#f9e13d}
+.mainConPlay04.on .mainTxt.on:before{background-color:#6cff96}
+.mainConPlay05.on .mainTxt.on:before{background-color:#007cff}
+.mainConPlay01.on .mainTxt.on:nth-child(2):before,
+.mainConPlay02.on .mainTxt.on:nth-child(2):before,
+.mainConPlay03.on .mainTxt.on:nth-child(3):before,
+.mainConPlay04.on .mainTxt.on:nth-child(3):before{animation-delay:1.2s}
+
+.mainWrap.play .mainVisBg{bottom:0;right:-5px;height:220px}
+.mainConPlay01.on .mainVisElem{right:10px;bottom:3px;width:151px;height:251px;background-image:url('../../../../img/bam/hdc/cc/main/img_play01_02.png')}
+.mainConPlay02.on .mainVisElem{right:-6px;bottom:2px;width:166px;height:226px;background-image:url('../../../../img/bam/hdc/cc/main/img_play02_02.png')}
+.mainConPlay03.on .mainVisElem{right:10px;bottom:3px;width:171px;height:236px;background-image:url('../../../../img/bam/hdc/cc/main/img_play03_02.png')}
+.mainConPlay04.on .mainVisElem{right:10px;bottom:5px;width:138px;height:218px;background-image:url('../../../../img/bam/hdc/cc/main/img_play04_02.png')}
+.mainConPlay05.on .mainVisElem{right:-18px;width:206px;height:226px;background-image:url('../../../../img/bam/hdc/cc/main/img_play05_02.png')}
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************** µ¡ˆ≈–∆— *****************************************************************************/
+.mainConDigital02.on .mainTxt.on:before{background-color:#f0438c}
+.mainConDigital02.on .mainVisElem{right:4px;bottom:40px;width:145px;height:75px;background-image:url('../../../../img/bam/hdc/cc/main/img_digital02_02.gif')}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
