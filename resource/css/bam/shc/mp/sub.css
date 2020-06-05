@@ -6,7 +6,7 @@
 
 
 
-/******************************************** ¼­ºñ½º¾È³» ********************************************/
+/******************************************** ì„œë¹„ìŠ¤ì•ˆë‚´ ********************************************/
 .svcInfoBx{padding:22px 0 22px 75px}
 .svcInfoBx:before{content:'';display:block;position:absolute;top:56px;left:11px;width:52px;height:52px;background-position:center center;background-repeat:no-repeat;background-size:100% 100%;opacity:0;transform:rotateY(630deg)}
 .svcInfoBx.bx1:before{background-image:url('../../../../img/bam/shc/mp/svcinfo/icon_infobox1.png')}
@@ -41,11 +41,11 @@
 
 
 
-/******************************************** ¸¶ÀÌÄ« Á¤º¸ ********************************************/
+/******************************************** ë§ˆì´ì¹´ ì •ë³´ ********************************************/
 .myCarWrap{position:relative}
 .myCarBx{display:table;table-layout:fixed;width:100%}
 .myCarBx > *{display:table-cell;vertical-align:middle}
-.myCarBx .myCarImg{width:50%;width:calc(50% - 10px);max-width:120px;padding-right:10px}
+.myCarBx .myCarImg{width:50%;max-width:120px;padding-right:10px}
 .myCarBx .myCarCon{text-align:right}
 .myCarBx .myCarCon.center{text-align:center}
 .carNone{line-height:1.4;padding-top:92px;padding-bottom:28px;background-image:url('../../../../img/bam/shc/mp/img_car_none.png');background-position:center 40px;background-repeat:no-repeat;background-size:70px auto;text-align:center}
@@ -57,7 +57,7 @@
 
 
 
-/* ÀÚµ¿Â÷ µî·Ï */
+/* ìë™ì°¨ ë“±ë¡ */
 .myCarLst > li{margin-top:35px;opacity:0;transform:translateY(20px);animation:myCarLst 0.8s ease-out forwards}
 .myCarLst > li:first-child{margin-top:0}
 .myCarLst > li:nth-child(1){animation-delay:0.2s}
@@ -95,7 +95,7 @@
 
 
 
-/* ÀÚµ¿Â÷ µî·Ï ÆË¾÷ */
+/* ìë™ì°¨ ë“±ë¡ íŒì—… */
 .srchCarInp{border-bottom:2px solid #2c3569}
 .srchCarInp input{padding-bottom:6px;font-size:20px;font-weight:200}
 .srchCarInp input::-webkit-input-placeholder{color:#828282;font-weight:200}
@@ -138,7 +138,7 @@
 
 
 
-/* ÀÚµ¿Â÷ ±âº»Á¤º¸ */
+/* ìë™ì°¨ ê¸°ë³¸ì •ë³´ */
 .myCarInfo *{line-height:1.2}
 .myCarInfoTit{font-size:16px;font-weight:700;text-align:right;word-break:keep-all}
 .myCarInfoTxt{margin-top:5px;font-size:16px;font-weight:200}
@@ -164,13 +164,13 @@
 
 
 
-/******************************************** ¸¶ÀÌÄ« ½Ã¼¼ ********************************************/
+/******************************************** ë§ˆì´ì¹´ ì‹œì„¸ ********************************************/
 .prcSel{text-align:center}
 .prcSelTxt{margin:13px 0 3px;font-size:19px;font-weight:200}
 span.prcSelTxt{display:inline-block;margin:8px 0 0 2px;vertical-align:top}
 
 
-/* ÁÖÇà°Å¸® ¼±ÅÃ ÆË¾÷ */
+/* ì£¼í–‰ê±°ë¦¬ ì„ íƒ íŒì—… */
 .distBtn{display:inline-block;padding:8px 30px 6px 8px;border-bottom:2px solid #2c3569;background:url('../../../../img/bam/shc/mp/sel_arrow.png') right 10px center no-repeat;background-size:9px auto;color:#2c3569;font-size:18px;font-weight:800;vertical-align:top}
 .distBtn:after{content:'km'}
 
@@ -206,7 +206,7 @@ span.prcSelTxt{display:inline-block;margin:8px 0 0 2px;vertical-align:top}
 
 
 
-/* ¶óÀÎ °ÔÀÌÁö  */
+/* ë¼ì¸ ê²Œì´ì§€  */
 .prcGauge{position:relative;width:155px;margin:0 auto;transform:rotateZ(70deg);z-index:1}
 .prcGaugeSvg{position:relative;width:155px;height:155px}
 .prcGaugeBg,
@@ -226,7 +226,7 @@ span.prcSelTxt{display:inline-block;margin:8px 0 0 2px;vertical-align:top}
 
 
 
-/* °è±âÆÇ */
+/* ê³„ê¸°íŒ */
 .dashWrap .dashGaugeWrap{float:left;width:141px}
 .dashWrap .dashGauge{overflow:hidden;position:relative;width:141px;height:114px;background:url('../../../../img/bam/shc/mp/img_dash_gauge.png') center top no-repeat;background-size:100% 100%}
 .dashWrap .dashGauge:before{content:'';display:block;position:absolute;top:40px;left:50%;width:105px;height:60px;margin-left:-54px;background:url('../../../../img/bam/shc/mp/bg_dash_gauge1.png') left top no-repeat;background-size:100% 100%}
@@ -265,7 +265,7 @@ span.prcSelTxt{display:inline-block;margin:8px 0 0 2px;vertical-align:top}
 
 
 
-/******************************************** ¸¶ÀÌÄ« ±İÀ¶°ü¸® ********************************************/
+/******************************************** ë§ˆì´ì¹´ ê¸ˆìœµê´€ë¦¬ ********************************************/
 .detailSlide{margin:14px -17px 0 0;padding:0}
 .detailSlide .slick-list{padding:2px 2px 10px 5px}
 .detailSlideBx{position:relative;width:205px;margin-right:17px;padding:22px 17px 20px;background-color:#ffffff;border-radius:8px;text-align:left;box-shadow:0 2px 5px rgba(0,0,0,0.2);opacity:0;transform:translateY(20px);animation:detailSlideBx 0.5s ease-out forwards}
@@ -307,7 +307,7 @@ background:linear-gradient(to right, #bdd4fc 0%, #9992ee 100%)
 
 
 
-/******************************************** ¸¶ÀÌÄ« À¯Áöºñ Áö¿ø ********************************************/
+/******************************************** ë§ˆì´ì¹´ ìœ ì§€ë¹„ ì§€ì› ********************************************/
 .cpTab{margin:25px 0 18px}
 .cpTabLine{display:table;table-layout:fixed;width:100%;margin-top:5px}
 .cpTabLine:first-child{margin-top:0}
@@ -388,8 +388,8 @@ background:linear-gradient(to right, #bdd4fc 0%, #9992ee 100%)
 
 
 
-/************************************************************* ±âÁ¸ÄÚµå *************************************************************/
-/* ·Î±×ÀÎ */
+/************************************************************* ê¸°ì¡´ì½”ë“œ *************************************************************/
+/* ë¡œê·¸ì¸ */
 .joinWrap .tabMenu{margin:20px 0}
 .joinWrap .tabMenu li{border:none;background:none}
 .joinWrap .tabMenu li.on + li{border:none}
